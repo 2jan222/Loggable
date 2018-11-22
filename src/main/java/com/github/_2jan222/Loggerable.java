@@ -1,5 +1,7 @@
 package com.github._2jan222;
 
+import java.awt.*;
+
 /**
  * Logger interface for logger integration in the future.
  * @author Janik Mayr on 03.09.2018
@@ -14,6 +16,23 @@ public interface Loggerable {
     String ANSI_PURPLE = "\u001B[35m";
     String ANSI_CYAN = "\u001B[36m";
     String ANSI_WHITE = "\u001B[37m";
+
+    default String fillColor(int r, int g, int b) {
+        return "\033[38;2;" + r + ";" + g + ";" + b +"m";
+    }
+
+    default String backgrondColor(int r, int g, int b) {
+        return "\033[48;2;" + r + ";" + g + ";" + b +"m";
+    }
+
+    default String fillColor(Color c) {
+        return "\033[38;2;" + c.getRed() + ";" + c.getGreen() + ";" + c.getBlue() +"m";
+    }
+
+    default String backgrondColor(Color c) {
+        return "\033[48;2;" + c.getRed() + ";" + c.getGreen() + ";" + c.getBlue() +"m";
+    }
+
 
     /**
      * Log info message.
