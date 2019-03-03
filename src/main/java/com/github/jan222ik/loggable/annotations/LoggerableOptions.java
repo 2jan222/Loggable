@@ -1,4 +1,4 @@
-package com.github._2jan222.annotations;
+package com.github.jan222ik.loggable.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

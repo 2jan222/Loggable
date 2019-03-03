@@ -1,52 +1,50 @@
-package com.github._2jan222;
+package com.github.jan222ik.loggable;
 
 /**
  * Logger interface for logger integration in the future.
  * @author Janik Mayr on 03.09.2018
  */
 public interface Loggerable {
-    String ANSI_RESET = "\u001B[0m";
-    String ANSI_BLACK = "\u001B[30m";
-    String ANSI_RED = "\u001B[31m";
-    String ANSI_GREEN = "\u001B[32m";
-    String ANSI_YELLOW = "\u001B[33m";
-    String ANSI_BLUE = "\u001B[34m";
-    String ANSI_PURPLE = "\u001B[35m";
-    String ANSI_CYAN = "\u001B[36m";
-    String ANSI_WHITE = "\u001B[37m";
 
     /**
      * Log info message.
      * @param info message to log
      */
-    void info(String info);
+    void info(String info, LoggerColor... color);
 
     /**
      * Log debug message.
      * @param debug message to log
      */
-    void debug(String debug);
+    void debug(String debug, LoggerColor... color);
 
     /**
      * Log warn message.
      * @param warn message to log
      */
-    void warn(String warn);
+    void warn(String warn, LoggerColor... color);
 
     /**
      * Log error message.
      * @param error message to log
      */
-    void error(String error);
+    void error(String error, LoggerColor... color);
 
     /**
      * Log fatal error message.
      * @param fatal message to log
      */
-    void fatal(String fatal);
+    void fatal(String fatal, LoggerColor... color);
 
     /**
      * Closes all streams.
      */
     default void closeStreams(){/*NOTHING TO DO HERE*/}
+
+    Loggerable setInfoVisibility(boolean infoVisibility);
+    Loggerable setDebugVisibility(boolean debugVisibility);
+    Loggerable setWarnVisibility(boolean warnVisibility);
+    Loggerable setErrorVisibility(boolean errorVisibility);
+    Loggerable setFatalVisibility(boolean fatalVisibility);
+
 }

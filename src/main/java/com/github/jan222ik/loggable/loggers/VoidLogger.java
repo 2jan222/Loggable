@@ -1,4 +1,6 @@
-package com.github._2jan222.loggers;
+package com.github.jan222ik.loggable.loggers;
+
+import com.github.jan222ik.loggable.LoggerColor;
 
 /**
  * Discards void jobs.
@@ -10,33 +12,33 @@ public class VoidLogger extends AbstractLogger {
      *
      * @param info message to void
      */
-    public void info(String info) {}
+    public void info(String info, LoggerColor... color) {}
 
     /**
      * Void debug message.
      *
      * @param debug message to void
      */
-    public void debug(String debug) {}
+    public void debug(String debug, LoggerColor... color) {}
 
     /**
      * Void warn message.
      *
      * @param warn message to void
      */
-    public void warn(String warn) {}
+    public void warn(String warn, LoggerColor... color) {}
 
     /**
      * Void error message.
      *
      * @param error message to void
      */
-    public void error(String error) {}
+    public void error(String error, LoggerColor... color) {}
 
     /**
      * Void fatal error message.
      *
      * @param fatal message to void
      */
-    public void fatal(String fatal) {}
+    public void fatal(String fatal, LoggerColor... color) {}
 }
