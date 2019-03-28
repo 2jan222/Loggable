@@ -1,5 +1,7 @@
 package com.github.jan222ik.loggable;
 
+import jdk.nashorn.internal.runtime.logging.Loggable;
+
 /**
  * Logger interface for logger integration in the future.
  * @author Janik Mayr on 03.09.2018
@@ -47,4 +49,7 @@ public interface Loggerable {
     Loggerable setErrorVisibility(boolean errorVisibility);
     Loggerable setFatalVisibility(boolean fatalVisibility);
 
+    static Loggerable getInstance() {
+        return LoggerSingleton.getLoggerInstance();
+    }
 }
