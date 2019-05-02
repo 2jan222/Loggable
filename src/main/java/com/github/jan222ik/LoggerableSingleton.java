@@ -1,26 +1,32 @@
-package com.github.jan222ik.loggable;
+package com.github.jan222ik;
 
 
-import com.github.jan222ik.loggable.exceptions.LoggerableException;
+import com.github.jan222ik.exceptions.LoggerableException;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.Nullable;
 
 /**
- * LoggerSingleton manages existing Loggers.
- * @author Janik Mayr on 27.09.2018
+ * LoggerableSingleton manages the active Loggers.
+ * @author Janik Mayr
  */
-public final class LoggerSingleton {
+final class LoggerableSingleton {
     private static Loggerable singleton;
 
     /**
      * Private Constructor to prohibit creation of this class.
      */
-    private LoggerSingleton() { }
+    @Contract(pure = true)
+    private LoggerableSingleton() { }
 
     /**
      * Setup the Logger to distribute.
      * @param logger Logger to distribute.
+     * @return given logger.
      */
-    public static void setup(final Loggerable logger) {
+    @Contract("!null -> !null; null -> null")
+    public static Loggerable setup(@Nullable final Loggerable logger) {
         singleton = logger;
+        return singleton;
     }
 
     /**
