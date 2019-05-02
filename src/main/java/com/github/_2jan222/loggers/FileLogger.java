@@ -1,6 +1,6 @@
-package com.github.jan222ik.loggers;
+package com.github._2jan222.loggers;
 
-import com.github.jan222ik.exceptions.LoggerableException;
+import com.github._2jan222.exceptions.LoggerableException;
 
 import java.io.PrintWriter;
 import java.time.LocalDateTime;

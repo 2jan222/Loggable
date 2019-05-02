@@ -1,7 +1,7 @@
-package com.github.jan222ik.loggers;
+package com.github._2jan222.loggers;
 
 
-import com.github.jan222ik.Loggerable;
+import com.github._2jan222.Loggerable;
 
 /**
  * MultiLogger relegates the massage to all given loggers.

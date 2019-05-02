@@ -1,4 +1,4 @@
-package com.github.jan222ik.annotations;
+package com.github._2jan222.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

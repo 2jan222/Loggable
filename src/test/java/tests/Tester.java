@@ -1,9 +1,9 @@
 package tests;
 
-import com.github.jan222ik.Loggerable;
-import com.github.jan222ik.annotations.LoggerableInjector;
-import com.github.jan222ik.loggers.SystemStreamLogger;
-import com.github.jan222ik.parser.LoggerInjector;
+import com.github._2jan222.Loggerable;
+import com.github._2jan222.annotations.LoggerableInjector;
+import com.github._2jan222.loggers.SystemStreamLogger;
+import com.github._2jan222.parser.LoggerInjector;
 import org.junit.jupiter.api.Test;
 
 

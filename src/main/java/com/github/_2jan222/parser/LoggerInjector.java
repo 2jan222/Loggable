@@ -1,7 +1,7 @@
-package com.github.jan222ik.parser;
+package com.github._2jan222.parser;
 
-import com.github.jan222ik.Loggerable;
-import com.github.jan222ik.annotations.LoggerableInjector;
+import com.github._2jan222.Loggerable;
+import com.github._2jan222.annotations.LoggerableInjector;
 import com.sun.istack.internal.NotNull;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;

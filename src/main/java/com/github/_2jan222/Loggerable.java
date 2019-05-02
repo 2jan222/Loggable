@@ -1,4 +1,4 @@
-package com.github.jan222ik;
+package com.github._2jan222;
 
 import java.awt.Color;
 import java.util.ArrayList;
