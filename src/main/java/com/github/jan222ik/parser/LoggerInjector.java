@@ -1,7 +1,7 @@
-package com.github._2jan222.parser;
+package com.github.jan222ik.parser;
 
-import com.github._2jan222.Loggerable;
-import com.github._2jan222.annotations.LoggerableInjector;
+import com.github.jan222ik.Loggerable;
+import com.github.jan222ik.annotations.LoggerableInjector;
 import com.sun.istack.internal.NotNull;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;
@@ -13,7 +13,7 @@ public class LoggerInjector {
     public LoggerInjector(@NotNull Loggerable logger, @NotNull String injectionPackage) {
         Reflections reflections = new Reflections(injectionPackage, new FieldAnnotationsScanner());
         Set<Field> fieldsAnnotatedWith = reflections.getFieldsAnnotatedWith(LoggerableInjector.class);
-        for (Field field: fieldsAnnotatedWith) {
+        for (Field field : fieldsAnnotatedWith) {
             field.setAccessible(true);
             try {
                 System.out.println("Type = " + field.getType());
@@ -22,7 +22,7 @@ public class LoggerInjector {
                 Class<?> declaringClass = field.getDeclaringClass();
                 System.out.println("declaringClass = " + declaringClass);
                 //Field field1 = field.getDeclaringClass().getField(field.getName());
-                Object o = declaringClass.newInstance();//field1.getType().newInstance();
+                Object o = declaringClass.newInstance(); //field1.getType().newInstance();
                 field.set(o, logger);
             } catch (IllegalAccessException | InstantiationException e) {
                 e.printStackTrace();
