@@ -1,7 +1,7 @@
-package com.github._2jan222;
+package com.github.jan222ik;
 
 
-import com.github._2jan222.exceptions.LoggerableException;
+import com.github.jan222ik.exceptions.LoggerableException;
 
 /**
  * LoggerSingleton manages existing Loggers.

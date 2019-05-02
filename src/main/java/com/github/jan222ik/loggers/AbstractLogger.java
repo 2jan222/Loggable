@@ -1,7 +1,7 @@
-package com.github._2jan222.loggers;
+package com.github.jan222ik.loggers;
 
-import com.github._2jan222.Loggerable;
-import com.github._2jan222.parser.LoggerableOptionsParser;
+import com.github.jan222ik.Loggerable;
+import com.github.jan222ik.parser.LoggerableOptionsParser;
 
 
 public abstract class AbstractLogger implements Loggerable {

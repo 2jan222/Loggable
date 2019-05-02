@@ -1,4 +1,4 @@
-package com.github._2jan222.exceptions;
+package com.github.jan222ik.exceptions;
 
 /**
  * Loggerable Exception.

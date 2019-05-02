@@ -1,6 +1,6 @@
-package com.github._2jan222.parser;
+package com.github.jan222ik.parser;
 
-import com.github._2jan222.annotations.LoggerableOptions;
+import com.github.jan222ik.annotations.LoggerableOptions;
 
 public class LoggerableOptionsParser extends SecurityManager {
     public String parse(int depth) {

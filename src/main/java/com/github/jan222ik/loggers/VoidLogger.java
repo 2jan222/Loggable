@@ -1,4 +1,4 @@
-package com.github._2jan222.loggers;
+package com.github.jan222ik.loggers;
 
 /**
  * Discards void jobs.
