@@ -13,7 +13,7 @@ public class LoggerInjector {
     public LoggerInjector(@NotNull Loggerable logger, @NotNull String injectionPackage) {
         Reflections reflections = new Reflections(injectionPackage, new FieldAnnotationsScanner());
         Set<Field> fieldsAnnotatedWith = reflections.getFieldsAnnotatedWith(LoggerableInjector.class);
-        for (Field field: fieldsAnnotatedWith) {
+        for (Field field : fieldsAnnotatedWith) {
             field.setAccessible(true);
             try {
                 System.out.println("Type = " + field.getType());
@@ -22,7 +22,7 @@ public class LoggerInjector {
                 Class<?> declaringClass = field.getDeclaringClass();
                 System.out.println("declaringClass = " + declaringClass);
                 //Field field1 = field.getDeclaringClass().getField(field.getName());
-                Object o = declaringClass.newInstance();//field1.getType().newInstance();
+                Object o = declaringClass.newInstance(); //field1.getType().newInstance();
                 field.set(o, logger);
             } catch (IllegalAccessException | InstantiationException e) {
                 e.printStackTrace();

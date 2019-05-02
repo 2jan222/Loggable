@@ -6,6 +6,6 @@ public class LoggerableOptionsParser extends SecurityManager {
     public String parse(int depth) {
         Class aClass = getClassContext()[depth];
         LoggerableOptions annotation = (LoggerableOptions) aClass.getAnnotation(LoggerableOptions.class);
-        return (annotation != null) ? ">" + annotation.value() + " ":" ";
+        return (annotation != null) ? ">" + annotation.value() + " " : " ";
     }
 }
