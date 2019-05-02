@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class LoggerableClassDisplayNameParser extends SecurityManager {
     public String parse(int maxDepth) {
         int i = 0;
-        while (i <= maxDepth) {
+        while (i <= maxDepth && i < getClassContext().length) {
             Class aClass = getClassContext()[i];
             LoggerableClassDisplayName annotation =
                     (LoggerableClassDisplayName) aClass.getAnnotation(LoggerableClassDisplayName.class);
@@ -29,7 +29,7 @@ public class LoggerableClassDisplayNameParser extends SecurityManager {
     public String parseContinueTilMax(int maxDepth) {
         int i = 0;
         LinkedList<LoggerableClassDisplayName> values = new LinkedList<>();
-        while (i <= maxDepth) {
+        while (i <= maxDepth && i < getClassContext().length) {
             Class aClass = getClassContext()[i];
             LoggerableClassDisplayName annotation =
                     (LoggerableClassDisplayName) aClass.getAnnotation(LoggerableClassDisplayName.class);
